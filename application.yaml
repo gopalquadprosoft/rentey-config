@@ -6,3 +6,19 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://${EUREKA_SERVER_ADDRESS:localhost}:${EUREKA_SERVER_PORT:9632}/eureka/
+spring:  
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: aZ43MLgoCMpcYHsLEF7DBiaPS5LAgvyS
+            client-secret: qmWgL_aH5BivTMMOl3ybvQh9CHfj48713I0_81zfbui8hzfyu4Lk1yqyLzldZFQ1
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          auth0:
+            # trailing slash is important!
+            issuer-uri: https://salaigopal.us.auth0.com/
