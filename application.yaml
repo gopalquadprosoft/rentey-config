@@ -6,6 +6,10 @@ eureka:
     fetch-registry: true
     serviceUrl:
       defaultZone: http://${EUREKA_SERVER_ADDRESS:localhost}:${EUREKA_SERVER_PORT:9632}/eureka/
+okta:
+  oauth2:
+    issuer: https://trial-8235301.okta.com/oauth2/default
+    audience: api://default
 # spring:  
 #   security:
 #     oauth2:
